@@ -1,0 +1,49 @@
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+h1{
+  text-align: center;
+}
+.menu{
+
+}
+
+.menu ul li{
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  display: inline-block;
+  position: relative;
+  float: left;
+  letter-spacing: 0.5px;
+  padding: 10px;
+  margin-left: 10px;
+  transition: all ease 0.3s;
+}
+li:hover{
+  background: black;
+}
+.dropdown ul{
+  display: none;
+  position: absolute;
+  left: 0;
+  padding-left: 0;
+  min-width: 10px;
+}
+.dropdown ul li {
+  margin: 10px;
+  color: white;
+  width: 100%;
+  float: left;
+}
+.dropdown ul li:hover{
+  background: white;
+  color: black;
+}
+.dropdown:hover ul{
+  background: black;
+  min-width: 10px;
+  display: block;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Text Editor </title>
+    <script src="js/editor.js" charset="utf-8"></script>
+    <script src="https://use.fontawesome.com/b203264e50.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="css/editor.css">
+    <style media="screen">
+    body{
+      background-image: url('bg.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+    </style>
+  </head>
+  <body onload="editor(); bgColor();">
+    <h1>Text Editor</h1>
+
+    <div class="container">
+
+        <div class="menu">
+          <ul>
+          <li class="dropdown">Options
+            <ul>
+              <li onclick="execCmd('bold')">Bold</li>
+              <li onclick="execCmd('italic')">Italic</li>
+              <li onclick="execCmd('underline')">Underline</li>
+              <li onclick="execCmd('strikethrough')">StrikeThrough</li>
+            </ul>
+          </li>
+          <li class="dropdown">ALign
+            <ul>
+              <li onclick="execCmd('justifyLeft')">Align-Left</li>
+              <li onclick="execCmd('justifyCenter')">Align-Center</li>
+              <li onclick="execCmd('justifyRight')">Align-Right</li>
+              <li onclick="execCmd('justifyFull')">Align-Justify</li>
+            </ul>
+          </li>
+          <li class="dropdown">List
+            <ul>
+              <li onclick="execCmd('insertUnorderedList')">Unordered_list</li>
+              <li onclick="execCmd('insertOrderedList')">Ordered_list</li>
+            </ul>
+          </li>
+          <li class="dropdown">S
+            <ul>
+              <li onclick="execCmd('cut')">CUT</li>
+              <li onclick="execCmd('copy')">COPY</li>
+              <li onclick="execCmd('undo')">undo</li>
+              <li onclick="execCmd('redo')">repeat</li>
+              <li onclick="execCmd('superscript')">Superscript</li>
+              <li onclick="execCmd('subscript')">subscript</li>
+
+            </ul>
+          </li>
+          </ul>
+        </div>
+
+          <iframe  name="textfield" width="1000px" height="650px" id="textfield"></iframe>
+    </div>
+
+  </body>
+</html>
