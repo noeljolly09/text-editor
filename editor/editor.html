@@ -16,18 +16,27 @@
     </style>
   </head>
   <body onload="editor(); bgColor();">
-    <h1>Text Editor</h1>
 
     <div class="container">
 
         <div class="menu">
           <ul>
-          <li class="dropdown">Options
+          <li class="dropdown">Edit
             <ul>
               <li onclick="execCmd('bold')">Bold</li>
               <li onclick="execCmd('italic')">Italic</li>
               <li onclick="execCmd('underline')">Underline</li>
               <li onclick="execCmd('strikethrough')">StrikeThrough</li>
+              <li onclick="execCmd('superscript')">Superscript</li>
+              <li onclick="execCmd('subscript')">subscript</li>
+            </ul>
+          </li>
+          <li class="dropdown">format
+            <ul>
+              <li onclick="execCmd('cut')">CUT</li>
+              <li onclick="execCmd('copy')">COPY</li>
+              <li onclick="execCmd('undo')">undo</li>
+              <li onclick="execCmd('redo')">redo</li>
             </ul>
           </li>
           <li class="dropdown">ALign
@@ -40,25 +49,16 @@
           </li>
           <li class="dropdown">List
             <ul>
-              <li onclick="execCmd('insertUnorderedList')">Unordered_list</li>
-              <li onclick="execCmd('insertOrderedList')">Ordered_list</li>
+              <li onclick="execCmd('insertUnorderedList')">shape_list</li>
+              <li onclick="execCmd('insertOrderedList')">Numbered_list</li>
             </ul>
           </li>
-          <li class="dropdown">S
-            <ul>
-              <li onclick="execCmd('cut')">CUT</li>
-              <li onclick="execCmd('copy')">COPY</li>
-              <li onclick="execCmd('undo')">undo</li>
-              <li onclick="execCmd('redo')">repeat</li>
-              <li onclick="execCmd('superscript')">Superscript</li>
-              <li onclick="execCmd('subscript')">subscript</li>
 
-            </ul>
-          </li>
+          <li onclick="createTable()">Table</li>
           </ul>
         </div>
 
-          <iframe  name="textfield" width="1000px" height="650px" id="textfield"></iframe>
+          <iframe  name="textfield" width="1000px" height="640px" id="textfield" style="border:2px solid black;"></iframe>
     </div>
 
   </body>
