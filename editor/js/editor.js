@@ -34,3 +34,25 @@ function execCmd(command){
   //   }
   //   document.write('<table border=1>' + table + '</table>');
   // }
+  function createTable()
+  {
+    var rows = prompt("enter no. of rows");
+    var cols = prompt("enter no. of columns");
+    var output = '<table>';
+
+     if (rows=="" || rows==null)
+     rows = 0;
+     if (cols=="" || cols==null)
+     rows = 0;
+      for (i=1; i<=rows; i++)
+      {
+        output = output +'<tr>'
+        for(j=1; j<=cols; j++)
+        {
+        output = output +'<td>'+'<input type="text">'+'</td>'
+        }
+        output = output +'</tr>'
+      }
+    output = output +'</table>'
+    document.getElementById('textfield').innerHTML = output;
+}
